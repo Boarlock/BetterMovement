@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{11DF5FC1-168E-D624-D9AA-AE67E169FB34}|BetterMovement.csproj|solutionrelative:tickspermovepatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{11DF5FC1-168E-D624-D9AA-AE67E169FB34}|BetterMovement.csproj|c:\\users\\administrator\\desktop\\rimworld modding\\better movement\\bettermovement\\bettermovementalert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11DF5FC1-168E-D624-D9AA-AE67E169FB34}|BetterMovement.csproj|solutionrelative:bettermovementalert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{11DF5FC1-168E-D624-D9AA-AE67E169FB34}|BetterMovement.csproj|c:\\users\\administrator\\desktop\\rimworld modding\\better movement\\bettermovement\\bettermovementmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11DF5FC1-168E-D624-D9AA-AE67E169FB34}|BetterMovement.csproj|solutionrelative:bettermovementmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,27 +37,6 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BetterMovementMod.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Rimworld Modding\\Better Movement\\BetterMovement\\BetterMovementMod.cs",
-              "RelativeDocumentMoniker": "BetterMovementMod.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Rimworld Modding\\Better Movement\\BetterMovement\\BetterMovementMod.cs",
-              "RelativeToolTip": "BetterMovementMod.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T22:17:25.015Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "TicksPerMovePatch.cs",
@@ -61,10 +44,44 @@
               "RelativeDocumentMoniker": "TicksPerMovePatch.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\Rimworld Modding\\Better Movement\\BetterMovement\\TicksPerMovePatch.cs",
               "RelativeToolTip": "TicksPerMovePatch.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowE0AAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwDwAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T22:25:05.718Z",
+              "WhenOpened": "2026-09-15T17:30:37.174Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BetterMovementAlert.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Rimworld Modding\\Better Movement\\BetterMovement\\BetterMovementAlert.cs",
+              "RelativeDocumentMoniker": "BetterMovementAlert.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Rimworld Modding\\Better Movement\\BetterMovement\\BetterMovementAlert.cs",
+              "RelativeToolTip": "BetterMovementAlert.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T17:27:14.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BetterMovementMod.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Rimworld Modding\\Better Movement\\BetterMovement\\BetterMovementMod.cs",
+              "RelativeDocumentMoniker": "BetterMovementMod.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Rimworld Modding\\Better Movement\\BetterMovement\\BetterMovementMod.cs",
+              "RelativeToolTip": "BetterMovementMod.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T17:39:06.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
               "$type": "Bookmark",
