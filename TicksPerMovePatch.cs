@@ -88,15 +88,6 @@ namespace BetterMovement
 
             float finalSpeedFactor = Mathf.Min(vanillaSpeedFactor, desiredSpeedFactor);
 
-            Log.Message(
-                $"[BetterMovement] Pawn={pawn.LabelShort} " +
-                $"Current={currentSpeed:F2} " +
-                $"Normal={normalSpeed:F2} " +
-                $"VanillaFactor={vanillaSpeedFactor:F3} " +
-                $"Encumbrance={encumbrance:P1} " +
-                $"DesiredFactor={desiredSpeedFactor:F3} " +
-                $"FinalFactor={finalSpeedFactor:F3}");
-
             return (normalSpeed * finalSpeedFactor) / 60f;
         }
 
