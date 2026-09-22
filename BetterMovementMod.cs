@@ -1,5 +1,7 @@
 ﻿using HarmonyLib;
+using System;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 using Verse;
 
@@ -7,12 +9,56 @@ namespace BetterMovement
 {
     public class BetterMovementMod : Mod
     {
+        public static bool VehicleFrameworkActive { get; private set; }
         public BetterMovementMod(ModContentPack content) : base(content)
         {
-            var harmony = new Harmony("b0arl0ck.bettermovement");
-            harmony.PatchAll();
+            VehicleFrameworkActive = LoadedModManager.RunningModsListForReading.Any(mod => mod.PackageIdPlayerFacing == "SmashPhil.VehicleFramework");
 
-            Log.Message($"[BetterMovement] Initialization completed.");
+            if (!VehicleFrameworkActive)
+            {
+                var harmony = new Harmony("b0arl0ck.bettermovement");
+                harmony.PatchAll();
+            }
+            else
+            {
+                PatchWithVehicleFrameworkHarmony();
+            }
+
+            Log.Message("[BetterMovement] Initialization completed.");
+        }
+
+        private static void PatchWithVehicleFrameworkHarmony()
+        {
+            var vfPatcherType = AccessTools.TypeByName("SmashTools.Patching.HarmonyPatcher");
+            var harmonyProperty = vfPatcherType.GetProperty("Harmony", BindingFlags.Static | BindingFlags.NonPublic);
+            var vfHarmonyObject = harmonyProperty.GetValue(null);
+
+            var vfHarmonyType = vfHarmonyObject.GetType();
+            var vfHarmonyMethodType = vfHarmonyType.Assembly.GetType("HarmonyLib.HarmonyMethod");
+
+            var ticksPerMove = AccessTools.Method(typeof(Pawn), "TicksPerMove", new[] { typeof(bool) });
+
+            var transpilerMethod = typeof(TicksPerMovePatch).GetMethod(nameof(TicksPerMovePatch.Transpiler), BindingFlags.Public | BindingFlags.Static);
+            var vfTranspiler = Activator.CreateInstance(vfHarmonyMethodType, transpilerMethod);
+
+            var patchMethod = vfHarmonyType.GetMethod("Patch", new[]
+            {
+                    typeof(MethodBase),
+                    vfHarmonyMethodType,
+                    vfHarmonyMethodType,
+                    vfHarmonyMethodType,
+                    vfHarmonyMethodType
+            });
+
+            patchMethod.Invoke(vfHarmonyObject, new object[]
+            {
+                    ticksPerMove,
+                    null!,
+                    null!,
+                    vfTranspiler,
+                    null!
+            });
+        
         }
 
         public override string SettingsCategory() => "Better Movement";
@@ -48,6 +94,8 @@ namespace BetterMovement
 
             listing.End();
             base.DoSettingsWindowContents(inRect);
+
+
         }
     }
 

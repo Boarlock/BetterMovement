@@ -13,10 +13,12 @@ namespace BetterMovement
         [HarmonyTranspiler]
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
+
             var codes = new List<CodeInstruction>(instructions);
 
             for (int i = 1; i < codes.Count - 2; i++)
-            {
+            {   
+
                 if (codes[i - 1].opcode == OpCodes.Ldloc_0 && codes[i].opcode == OpCodes.Ldc_R4 && codes[i + 1].opcode == OpCodes.Div && codes[i + 2].opcode == OpCodes.Stloc_1)
                 {
                     codes[i] = CodeInstruction.LoadArgument(0);
@@ -25,6 +27,7 @@ namespace BetterMovement
                     break;
                 }
             }
+
             return codes;
         }
 
